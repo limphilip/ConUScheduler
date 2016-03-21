@@ -161,6 +161,7 @@ foreach ($sequence as $year => $sequenceData)
 </div>
 <div id="dialog"></div>
 <div id="calendar" style="display: none;"></div>
+<div id="ajax-results" style="display: none;"></div>
 <script>
     $(function(){
         $(":checkbox").on('click',function(){
@@ -216,11 +217,28 @@ foreach ($sequence as $year => $sequenceData)
                })
            });
             // JSON it so that it can be passed via Ajax call to a php page
-            var data = JSON.stringify(data);
+            var _data = JSON.stringify(data);
 
-            console.log(JSON.stringify(data));
+            // AJAX
 
-            $('#dialog').html(data).dialog({ width: 500, heigh: 500});
+            $.ajax({
+                url : "<?php echo Yii::app()->createAbsoluteUrl("scheduler/AjaxExample"); ?>",
+                type: "POST",
+                data : "myData="+_data,
+                success : function(data)
+                {
+                    $("#ajax-results").html(data);
+                    $("#ajax-results").dialog({ width: 500, height: 500})
+                },
+                error: function()
+                {
+                    alert("there was an error")
+                }
+            })
+
+            console.log(JSON.stringify(_data));
+
+           // $('#dialog').html(_data).dialog({ width: 500, heigh: 500});   COMMENTED IT OUT FOR AJAX EXAMPLE
         });
 
 

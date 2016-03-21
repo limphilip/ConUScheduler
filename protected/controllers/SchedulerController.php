@@ -21,6 +21,19 @@ class SchedulerController extends Controller
         );
     }
 
+	public function actionAjaxExample()
+	{
+		$post_data = $_POST['myData'];
+
+
+
+		$this->renderPartial('_ajax', array(
+				'data'=> $post_data,
+			)
+		);
+
+	}
+
 	public function actionGenerate()
 	{
 		$model = new PreferenceForm();
@@ -162,5 +175,7 @@ class SchedulerController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+
 
 }

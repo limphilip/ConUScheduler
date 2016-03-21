@@ -7368,3 +7368,91 @@ Stack trace:
 REQUEST_URI=/index.php?r=scheduler/generate
 HTTP_REFERER=http://www.conuscheduler.localhost/index.php?r=scheduler
 ---
+2016/03/21 21:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "schedule/updateAjaxscheduler/_ajax.php".' in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController('schedule/update...')
+#1 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=schedule/updateAjaxscheduler/_ajax.php
+HTTP_REFERER=http://conuscheduler.localhost/index.php?r=scheduler/generate
+---
+2016/03/21 21:38:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "_ajax.php".' in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php:483
+Stack trace:
+#0 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(270): CController->missingAction('_ajax.php')
+#1 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(282): CController->run('_ajax.php')
+#2 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController('scheduler/_ajax...')
+#3 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=scheduler/_ajax.php
+HTTP_REFERER=http://conuscheduler.localhost/index.php?r=scheduler/generate
+---
+2016/03/21 21:52:20 [error] [php] Undefined index: POST (D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\protected\controllers\SchedulerController.php:26)
+Stack trace:
+#0 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(133): SchedulerController->runAction()
+#1 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CInlineFilter.php(58): SchedulerController->filterAccessControl()
+#4 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(265): SchedulerController->runActionWithFilters()
+#7 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(282): SchedulerController->run()
+#8 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=scheduler/AjaxExample
+in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\protected\controllers\SchedulerController.php (26)
+in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php (13)
+2016/03/21 21:52:30 [error] [php] Undefined index: POST (D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\protected\controllers\SchedulerController.php:26)
+Stack trace:
+#0 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(133): SchedulerController->runAction()
+#1 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CInlineFilter.php(58): SchedulerController->filterAccessControl()
+#4 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(265): SchedulerController->runActionWithFilters()
+#7 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(282): SchedulerController->run()
+#8 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=scheduler/AjaxExample
+in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\protected\controllers\SchedulerController.php (26)
+in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php (13)
+2016/03/21 21:54:10 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\base\CComponent.php on line 111 and defined (D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CHttpRequest.php:205)
+Stack trace:
+#0 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\actions\CInlineAction.php(49): SchedulerController->actionAjaxExample()
+#1 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(133): SchedulerController->runAction()
+#3 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CInlineFilter.php(58): SchedulerController->filterAccessControl()
+#6 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(265): SchedulerController->runActionWithFilters()
+#9 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(282): SchedulerController->run()
+#10 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=scheduler/AjaxExample
+in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\protected\controllers\SchedulerController.php (26)
+in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php (13)
+2016/03/21 21:54:23 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\base\CComponent.php on line 111 and defined (D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CHttpRequest.php:205)
+Stack trace:
+#0 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\actions\CInlineAction.php(49): SchedulerController->actionAjaxExample()
+#1 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(133): SchedulerController->runAction()
+#3 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CInlineFilter.php(58): SchedulerController->filterAccessControl()
+#6 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CController.php(265): SchedulerController->runActionWithFilters()
+#9 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(282): SchedulerController->run()
+#10 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=scheduler/AjaxExample
+in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\protected\controllers\SchedulerController.php (26)
+in D:\DATA\S_SERVER\xampp\htdocs\ConUScheduler\index.php (13)
