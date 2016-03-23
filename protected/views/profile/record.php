@@ -11,7 +11,35 @@ $this->menu=array(
     'dataProvider'=>$model->search(),
     'filter'=>$model,
     'columns'=>array(
-        'ID',
-        'course.course_code'
+        'course.course_code',
+        'course.credits',
+        'Grade',
+        'GPA'
     ),
 )); ?>
+
+<?php
+
+$sql="SELECT * FROM completed_courses LEFT JOIN course ON completed_courses.courseID=course.ID";
+
+$test=Yii::app()->db->createCommand($sql);
+$data=$test->queryAll();
+$creditTotal=0;
+$sum=0;
+
+foreach ($data as $value)
+{
+    if ($value['userID']== Yii::app()->user->userID) {
+        $sum+=$value['GPA']*$value['credits'];
+        $creditTotal+=$value['credits'];
+
+    }
+
+}
+$finalGPA=$sum/$creditTotal;
+$finalGPA=round($finalGPA,2);
+echo "<h2>";
+
+echo "Total GPA: $finalGPA";
+echo "</h2>";
+?>
