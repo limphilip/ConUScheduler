@@ -11672,3 +11672,47 @@ Stack trace:
 REQUEST_URI=/index.php?r=scheduler/ViewSaved
 HTTP_REFERER=http://www.conuscheduler.localhost/index.php?r=scheduler/index
 ---
+2016/03/28 07:00:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CourseSequence".' in C:\xampp\htdocs\ConUScheduler\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ConUScheduler\framework\web\CController.php(270): CController->missingAction('CourseSequence')
+#1 C:\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(282): CController->run('CourseSequence')
+#2 C:\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController('scheduler/Cours...')
+#3 C:\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ConUScheduler\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=scheduler/CourseSequence
+HTTP_REFERER=http://www.conuscheduler.localhost/index.php?r=scheduler/index
+---
+2016/03/28 07:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CourseSequence".' in C:\xampp\htdocs\ConUScheduler\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ConUScheduler\framework\web\CController.php(270): CController->missingAction('CourseSequence')
+#1 C:\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(282): CController->run('CourseSequence')
+#2 C:\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController('scheduler/Cours...')
+#3 C:\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ConUScheduler\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=scheduler/CourseSequence
+HTTP_REFERER=http://www.conuscheduler.localhost/index.php?r=scheduler/index
+---
+2016/03/28 07:22:55 [error] [php] Undefined variable: yearsToShow (C:\xampp\htdocs\ConUScheduler\protected\views\scheduler\sequence.php:70)
+Stack trace:
+#0 C:\xampp\htdocs\ConUScheduler\framework\web\CController.php(869): SchedulerController->renderFile()
+#1 C:\xampp\htdocs\ConUScheduler\framework\web\CController.php(782): SchedulerController->renderPartial()
+#2 C:\xampp\htdocs\ConUScheduler\protected\controllers\SchedulerController.php(26): SchedulerController->render()
+#3 C:\xampp\htdocs\ConUScheduler\framework\web\actions\CInlineAction.php(49): SchedulerController->actionCourseSequence()
+#4 C:\xampp\htdocs\ConUScheduler\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(133): SchedulerController->runAction()
+#6 C:\xampp\htdocs\ConUScheduler\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\ConUScheduler\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\ConUScheduler\framework\web\filters\CInlineFilter.php(58): SchedulerController->filterAccessControl()
+#9 C:\xampp\htdocs\ConUScheduler\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\ConUScheduler\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\ConUScheduler\framework\web\CController.php(265): SchedulerController->runActionWithFilters()
+#12 C:\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(282): SchedulerController->run()
+#13 C:\xampp\htdocs\ConUScheduler\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\ConUScheduler\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\ConUScheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=scheduler/CourseSequence
+in C:\xampp\htdocs\ConUScheduler\protected\views\scheduler\sequence.php (70)
+in C:\xampp\htdocs\ConUScheduler\protected\controllers\SchedulerController.php (26)
+in C:\xampp\htdocs\ConUScheduler\index.php (13)

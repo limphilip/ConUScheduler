@@ -8,11 +8,17 @@
  * @var $schedule SchedulerController
  */
 $this->menu=array(
-    array('label'=>'Schedule Planner', 'url'=>array('scheduler/index')),
+    array('label' => 'Schedule Planner', 'url'=>array('index')
+    ),
+    array('label'=>'My Saved Schedules', 'url'=>array('ViewSaved')
+    ),
+    array('label' => 'My Course Sequence', 'url'=>array('CourseSequence')
+    )
 );
+
 $this->breadcrumbs=array(
     'Scheduler',
-    'Saved Schedules',
+    'My Saved Schedules',
 );
 Yii::app()->clientScript->registerCoreScript('jquery.ui');
 Yii::app()->clientScript->registerCssFile(

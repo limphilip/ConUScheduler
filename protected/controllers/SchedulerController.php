@@ -21,6 +21,11 @@ class SchedulerController extends Controller
         );
     }
 
+	public function actionCourseSequence()
+	{
+		$this->render('sequence');
+	}
+
 	public function actionViewSaved()
 	{
 		$data = Yii::app()->db->createCommand()

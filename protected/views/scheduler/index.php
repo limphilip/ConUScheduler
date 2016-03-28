@@ -9,7 +9,12 @@ $this->breadcrumbs=array(
 	'Scheduler Planner',
 );
 $this->menu=array(
-    array('label'=>'View Saved Schedules', 'url'=>array('ViewSaved')),
+    array('label' => 'Schedule Planner', 'url'=>array('index')
+    ),
+    array('label'=>'My Saved Schedules', 'url'=>array('ViewSaved')
+    ),
+    array('label' => 'My Course Sequence', 'url'=>array('CourseSequence')
+    )
 );
 
 
